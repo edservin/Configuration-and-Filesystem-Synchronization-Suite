@@ -10,13 +10,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-Contributors
-Forks
-Stargazers
-Issues
-MIT License
-[LinkedIn][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -75,16 +68,27 @@ MIT License
 
 This Python script automates critical management tasks on Cisco ASR5500 devices, including saving the current configuration, updating the boot priority (boot system priority), and synchronizing the filesystem. It is designed to be executed before or after a planned change, ensuring devices boot with the correct configuration and maintain consistency. It uses concurrent processing to interact with multiple devices simultaneously, optimizing execution time.
 
-### Features
+## Features
 
-    Concurrent Automation: Processes multiple ASR5500 devices in parallel using ThreadPoolExecutor for fast and efficient execution.
-    Excel-based Device Management: Reads device connection details (hostname, IP, credentials) from an Excel file.
-    Configuration Saving: Saves the device's current configuration to flash memory with a descriptive filename that includes the hostname, date, change moment (BEFORE/AFTER), and change number.
-    Dynamic Boot Priority Determination: Analyzes show boot output to identify the lowest existing boot priority.
-    boot system priority Update: Configures a new boot system priority entry with a priority lower than the lowest existing one, pointing to the current boot image and the saved configuration.
-    Essential Commands: Executes autoconfirm and filesystem synchronize all to ensure persistence of changes and filesystem integrity.
-    Detailed HTML Report: Generates a comprehensive HTML report with the status of each device, key command outputs (final show boot, filesystem synchronize all), and any errors encountered.
-    Extensive Logging: Records all operations, successes, warnings, and errors in a log file (asr_automation.log) for easy debugging and auditing.
+    * Concurrent Automation: Processes multiple ASR5500 devices in parallel using ThreadPoolExecutor for fast and efficient execution.
+    
+    * Excel-based Device Management: Reads device connection details (hostname, IP, credentials) from an Excel file.
+    
+    * Configuration Saving: Saves the device's current configuration to flash memory with a descriptive filename that includes the 
+    hostname, date, change moment (BEFORE/AFTER), and change number.
+    
+    * Dynamic Boot Priority Determination: Analyzes show boot output to identify the lowest existing boot priority.
+    
+    * boot system priority Update: Configures a new boot system priority entry with a priority lower than the lowest existing one,
+    pointing to the current boot image and the saved configuration.
+    
+    * Essential Commands: Executes autoconfirm and filesystem synchronize all to ensure persistence of changes and filesystem integrity.
+    
+    * Detailed HTML Report: Generates a comprehensive HTML report with the status of each device, key command outputs (final show boot,
+    filesystem synchronize all), and any errors encountered.
+    
+    * Extensive Logging: Records all operations, successes, warnings, and errors in a log file (asr_automation.log) for easy debugging
+    and auditing.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -272,8 +276,6 @@ Project Link: https://github.com/[edservin]/Configuration-and-Filesystem-Synchro
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
 [Python.js]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [Python-url]: https://www.python.org/
