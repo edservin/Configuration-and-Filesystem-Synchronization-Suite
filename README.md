@@ -279,10 +279,6 @@ Project Link: https://github.com/[edservin]/Configuration-and-Filesystem-Synchro
 [Python-url]: https://www.python.org/
 [Pandas-js]: https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white
 [Pandas-url]: https://pandas.pydata.org/
-[Netmiko.js]: 
-[Netmiko-url]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB](https://img.shields.io/badge/Netmiko-0078D4?style=for-the-badge&logo=python&logoColor=white
-[Openpyxl.js]: 
-[Openpyxl-url]: https://img.shields.io/badge/openpyxl-4285F4?style=for-the-badge&logo=excel&logoColor=white
 
 
 
