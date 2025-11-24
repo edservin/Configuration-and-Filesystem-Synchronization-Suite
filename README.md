@@ -1,16 +1,7 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+
 <a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
 *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
@@ -18,35 +9,35 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![Unlicense License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
-
+Contributors
+Forks
+Stargazers
+Issues
+MIT License
+[LinkedIn][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/[edservin]/Configuration-and-Filesystem-Synchronization-Suite">
+    <!-- Replace with your project's logo if available -->
+    <img src="https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">ASR5500 Configuration and Filesystem Synchronization Suite
+
+</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Automate configuration saving, boot priority updates, and filesystem synchronization on Cisco ASR5500 devices.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/[edservin]/Configuration-and-Filesystem-Synchronization-Suite"><strong>Explore the Repo »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    &middot;
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    &middot;
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/[edservin]/Configuration-and-Filesystem-Synchronization-Suite/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    ·
+    <a href="https://github.com/[edservin]/Configuration-and-Filesystem-Synchronization-Suite/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -70,179 +61,193 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#important-considerations">Important Considerations</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This Python script automates critical management tasks on Cisco ASR5500 devices, including saving the current configuration, updating the boot priority (boot system priority), and synchronizing the filesystem. It is designed to be executed before or after a planned change, ensuring devices boot with the correct configuration and maintain consistency. It uses concurrent processing to interact with multiple devices simultaneously, optimizing execution time.
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Features
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+    Concurrent Automation: Processes multiple ASR5500 devices in parallel using ThreadPoolExecutor for fast and efficient execution.
+    Excel-based Device Management: Reads device connection details (hostname, IP, credentials) from an Excel file.
+    Configuration Saving: Saves the device's current configuration to flash memory with a descriptive filename that includes the hostname, date, change moment (BEFORE/AFTER), and change number.
+    Dynamic Boot Priority Determination: Analyzes show boot output to identify the lowest existing boot priority.
+    boot system priority Update: Configures a new boot system priority entry with a priority lower than the lowest existing one, pointing to the current boot image and the saved configuration.
+    Essential Commands: Executes autoconfirm and filesystem synchronize all to ensure persistence of changes and filesystem integrity.
+    Detailed HTML Report: Generates a comprehensive HTML report with the status of each device, key command outputs (final show boot, filesystem synchronize all), and any errors encountered.
+    Extensive Logging: Records all operations, successes, warnings, and errors in a log file (asr_automation.log) for easy debugging and auditing.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+Built With
 
-### Built With
+    Python
+    Pandas
+    Netmiko
+    Openpyxl
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Ensure you have the following installed:
 
-### Installation
+    Python 3.x (version 3.6 or higher recommended).
+    SSH access to the ASR5500 devices from the machine where the script is run.
+    Access credentials (username and password) with sufficient privileges to execute the necessary commands on the ASR5500s.
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
-   ```
+Installation
+
+    Clone the repository (or download the script):
+    bash
+    Copy Code
+
+    git clone https://github.com/[edservin]/Configuration-and-Filesystem-Synchronization-Suite.git
+    cd Configuration-and-Filesystem-Synchronization-Suite
+
+    Install Python dependencies:
+    bash
+    Copy Code
+
+    pip install pandas netmiko openpyxl
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The script is executed from the command line and requires three arguments: the change moment, the change number, and the path to the Excel file.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Input File Format
+
+The Excel file (.xlsx) must contain a sheet with the following columns (column names must match exactly):
+
+hostname 	ip 	username 	password
+ASR-CORE-01 	10.1.1.1 	admin 	cisco123
+ASR-EDGE-02 	10.1.1.2 	admin 	cisco123
+... 	... 	... 	...
+
+Script Execution
+
+bash
+
+
+Copy Code
+
+python asr_config_saver.py <MOMENT> <CHG_NUMBER> <EXCEL_FILE_PATH>
+
+
+Arguments:
+
+    <MOMENT>: Indicates the moment of the change. Can be BEFORE or AFTER.
+    <CHG_NUMBER>: The change number associated with the operation (e.g., CHG0001234).
+    <EXCEL_FILE_PATH>: The full path to the Excel file containing the list of devices.
+
+
+Example:
+
+bash
+
+
+Copy Code
+
+python asr_config_saver.py BEFORE CHG0009876 /home/user/devices.xlsx
+
+
+Output
+
+Upon completion, the script will generate the following files:
+
+    reporte_asr_YYYYMMDD_CHGXXXXXX.html: A detailed HTML report summarizing the status of each device, including key command outputs and any errors. The filename will include the date and change number.
+    asr_automation.log: A log file containing a chronological record of all operations, informational messages, warnings, and errors. It is crucial for debugging.
+
+
+Additionally, the console will display real-time progress messages.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+Important Considerations
 
-<!-- ROADMAP -->
-## Roadmap
+    Credentials Security: For production environments, storing credentials directly in plain text within an input file is not recommended. Consider implementing a more secure method, such as environment variables, a secret management system, or prompting for credentials at runtime.
+    delay_factor: The delay_factor values in the script are tuned for optimal performance. If you frequently experience NetmikoTimeoutException, especially for commands like filesystem synchronize all, consider slightly increasing the delay_factor for that specific command in the script.
+    Concurrency (max_workers): The number of concurrent threads (max_workers) is set to 10 by default. You can adjust this value in the script if your machine or network has limitations, or if you wish to process more devices simultaneously.
+    Network Connectivity: Ensure stable network connectivity to all target devices throughout the script's execution.
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+Troubleshooting
+
+    "Error: El archivo Excel no se encontró." (Error: The Excel file was not found.): Verify the path and name of the Excel file.
+    "Error al leer el archivo Excel..." (Error reading the Excel file...): Ensure the Excel file is not corrupted and that the columns match the expected format.
+    NetmikoTimeoutException:
+        Check network reachability (e.g., ping) to the device's IP address.
+        Ensure that the SSH port (22) is open on the device and not blocked by a firewall.
+        Consider increasing the delay_factor for the command causing the timeout in the script.
+    NetmikoAuthenticationException: Double-check the username and password provided in the Excel file.
+    Unexpected errors: Review the asr_automation.log file for specific exception details.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+    Fork the Project
+    Create your Feature Branch (git checkout -b feature/AmazingFeature)
+    Commit your Changes (git commit -m 'Add some AmazingFeature')
+    Push to the Branch (git push origin feature/AmazingFeature)
+    Open a Pull Request
 
-### Top contributors:
 
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
+Top contributors:
+
+<a href="https://github.com/[edservin]/Configuration-and-Filesystem-Synchronization-Suite/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=[edservin]/Configuration-and-Filesystem-Synchronization-Suite" alt="contrib.rocks image" />
 </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the Unlicense License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
-## Contact
+Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+[Eduardo Servin] - [edservin@cisco.com]
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: https://github.com/[edservin]/Configuration-and-Filesystem-Synchronization-Suite
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -250,32 +255,5 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+
+[linkedin-url]: https://linkedin.com/in/your-linkedin-profile # Replace with your LinkedIn profile URL
