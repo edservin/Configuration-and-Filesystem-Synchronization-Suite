@@ -99,8 +99,8 @@ This project was built with the help of various resources.
 
 * [![Python][Python.js]][Python-url]
 * [![Pandas][Pandas-js]][Pandas-url]
-* [Netmiko]
-* [Openpyxl]
+* [![Netmiko][Netmiko-js]][Netmiko-url]
+* [![Openpyxl][Openpyxl-js]][Openpyxl-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -281,6 +281,10 @@ Project Link: https://github.com/[edservin]/Configuration-and-Filesystem-Synchro
 [Python-url]: https://www.python.org/
 [Pandas-js]: https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white
 [Pandas-url]: https://pandas.pydata.org/
+[Netmiko-js]: https://img.shields.io/badge/Netmiko-0078D4?style=for-the-badge&logo=python&logoColor=white
+[Netmiko-url]: https://github.com/ktbyers/netmiko
+[Openpyxl-js]: https://img.shields.io/badge/openpyxl-4285F4?style=for-the-badge&logo=excel&logoColor=white
+[Openpyxl-url]: https://openpyxl.readthedocs.io/en/stable/
 
 
 
