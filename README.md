@@ -15,7 +15,7 @@
 <div align="center">
   <a href="https://github.com/[edservin]/Configuration-and-Filesystem-Synchronization-Suite">
     <!-- Replace with your project's logo if available -->
-    <img src="https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://dl.flathub.org/media/io/github/vikdevelop.SaveDesktop/be58e8d182e2e7995f50fbd7818ae2ca/icons/128x128/io.github.vikdevelop.SaveDesktop.png" alt="Logo" width="180" height="180">
   </a>
 
   <h3 align="center">ASR5500 Configuration and Filesystem Synchronization Suite
