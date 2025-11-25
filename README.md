@@ -146,10 +146,10 @@ The script is executed from the command line and requires three arguments: the c
 
 The Excel file (.xlsx) must contain a sheet with the following columns (column names must match exactly):
   ```sh
-hostname           ip              username     password
-ASR-CORE-01        10.1.1.1        admin        cisco123
-ASR-EDGE-02        10.1.1.2        admin        cisco123
-...                ...             ...          ...
+hostname           ip              username     password     protocol     os
+ASR-CORE-01        10.1.1.1        admin        cisco123     ssh          staros
+ASR-EDGE-02        10.1.1.2        admin        cisco123     ssh          staros
+...                ...             ...          ...          ...          ...
   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
